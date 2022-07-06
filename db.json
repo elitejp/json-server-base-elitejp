@@ -18,19 +18,19 @@
     {
       "nome": "test",
       "descricao": "bla bla bla",
-      "userId": 1,
+      "userId": "1",
       "id": 1
     },
     {
       "nome": "test 2",
       "descricao": "bla bla bla",
-      "userId": 1,
+      "userId": "1",
       "id": 2
     },
     {
       "nome": "testando 2",
       "descricao": "bla bla bla",
-      "userId": 2,
+      "userId": "2",
       "id": 3
     }
   ],

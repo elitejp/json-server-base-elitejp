@@ -9,7 +9,7 @@ const router = jsonServer.router("db.json");
 app.db = router.db;
 
 const rules = auth.rewriter({
-  users: 600,
+  users: 644,
   movies: 644,
   books: 644,
 
@@ -22,9 +22,25 @@ const rules = auth.rewriter({
   "/owner/:userId/movies": "/users/:userId?_embed=movies",
 });
 
-app.use(`/test/:idTest/:userId`, (req, res) => {
-  console.log(req.params);
-  res.json(JSON.parse(JSON.stringify(app.db)).books[req.params.idTest]);
+app.use(`/test/:userId/books`, (req, res) => {
+  const data = JSON.parse(JSON.stringify(app.db)).books;
+  let count = 0;
+
+  const dataFilter = data
+    .filter((item) => item.userId === req.params.userId)
+    .map((item) => {
+      count++;
+      return { ...item, userBook: count };
+    });
+
+  res.json(dataFilter);
+});
+
+app.use(`/change/:idTest/:userId`, (req, res) => {
+  console.log(req.params.idTest);
+  const data = JSON.parse(JSON.stringify(app.db)).books;
+  const dataFilter = data.filter((item) => item.userId === req.params.idTest);
+  res.json(dataFilter);
 });
 
 app.use(cors());
