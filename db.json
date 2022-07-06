@@ -6,6 +6,52 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "jp@gmail.com",
+      "password": "$2a$10$eqzg5hk7Dog/8gRssL1gbO/2ve5hdrEAKgSZ6/oYW3K85tyw39/56",
+      "name": "JP",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "nome": "test",
+      "descricao": "bla bla bla",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "nome": "test 2",
+      "descricao": "bla bla bla",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "nome": "testando 2",
+      "descricao": "bla bla bla",
+      "userId": 2,
+      "id": 3
+    }
+  ],
+  "movies": [
+    {
+      "nome": "DeadPool",
+      "descricao": "comedia, acao, heroi",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "nome": "iron Man",
+      "descricao": "acao, heroi",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "nome": "interstelar",
+      "descricao": "misterio, ficção",
+      "userId": 1,
+      "id": 1
     }
   ]
 }

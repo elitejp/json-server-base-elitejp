@@ -10,6 +10,21 @@ app.db = router.db;
 
 const rules = auth.rewriter({
   users: 600,
+  movies: 644,
+  books: 644,
+
+  // "/:userId/books": "/userBooks?userId=:userId",
+
+  "/owner/books/:userId/:id": "/books?userId=:userId&id=:id",
+  "/owner/movies/:userId/:id": "/movies?userId=:userId&id=:id",
+
+  "/owner/:userId/books": "/users/:userId?_embed=books",
+  "/owner/:userId/movies": "/users/:userId?_embed=movies",
+});
+
+app.use(`/test/:idTest/:userId`, (req, res) => {
+  console.log(req.params);
+  res.json(JSON.parse(JSON.stringify(app.db)).books[req.params.idTest]);
 });
 
 app.use(cors());

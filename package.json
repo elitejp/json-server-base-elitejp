@@ -2,6 +2,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "json-server": "^0.16.3",
-    "json-server-auth": "^2.1.0"
+    "json-server-auth": "^2.1.0",
+    "json-server-relationship": "^0.14.5",
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "watch": "nodemon server.js"
   }
 }
